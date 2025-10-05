@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
+
+    <title>Daily Grocery</title>
+</head>
+<body class="bg-gray-50 text-gray-600 antialiased">
+    <!--Navbar-->
+    <header class="bg-white shadow sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between item-center p-4">
+             <h1 class="text-2xl font-bold ">Daily Grocery</h1>
+            <ul class="hidden md:flex space-x-6 font-medium">
+                <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+                <li><a href="#products" class="hover:text-blue-600">Products</a></li>
+                <li><a href="#reviews" class="hover:text-blue-600">Reviews</a></li>
+                <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Hero Section-->
+
+    <section id="Home" class="bg-blue-800 text-white text-center py-20 px-4">
+        <h2 class="text-4xl font-bold mb-4">Welcome to Daily Grocery</h2>
+        <p class="mb-6 text-lg">Discover our best-selling products and amazing deals.</p>
+        <button class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg">Shop Now</button>
+    </section>
+
+    <!--Products Section-->
+   <section id="products" class="py-16 container mx-auto px-4">
+  <h2 class="text-3xl font-bold text-center mb-10">Our Products</h2>
+
+  <!-- Horizontal scroll container -->
+  <div class="flex gap-6 overflow-x-auto scrollbar-hide py-4">
+    <!-- Product Cards -->
+    <div class="min-w-[250px] bg-white p-6 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-transform duration-300">
+      <img src="https://assets.bonappetit.com/photos/57daf2c35a14a530086efae5/master/w_1600%2Cc_limit/undefined" alt="Product 1" class="rounded mb-3">
+      <h3 class="text-xl font-semibold">Apple</h3>
+      <p class="text-gray-600 text-sm mt-1">Australian apple. One apple a day, keeps the doctor away.</p>
+      <p class="font-bold mt-2">Price: $10</p>
+      <button class="mt-3 bg-blue-600 text-white px-4 py-2 rounded">Buy Now</button>
+    </div>
+
+    <div class="min-w-[250px] bg-white p-6 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-transform duration-300">
+      <img src="https://fishmart.com.bd/wp-content/uploads/2020/03/75.jpg" alt="Product 2" class="rounded mb-3">
+      <h3 class="text-xl font-semibold">Duck meat</h3>
+      <p class="text-gray-600 text-sm mt-1">Deshi duck. Tasty and delicious.</p>
+      <p class="font-bold mt-2">Price: $10</p>
+      <button class="mt-3 bg-blue-600 text-white px-4 py-2 rounded">Buy Now</button>
+    </div>
+
+    <div class="min-w-[250px] bg-white p-6 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-transform duration-300">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3-E3ZaZbCa6OnMbPfqYtLNyki5QqY6djKnQ&s" alt="Product 3" class="rounded mb-3">
+      <h3 class="text-xl font-semibold">Kalojira</h3>
+      <p class="text-gray-600 text-sm mt-1">Kalojira. Good for body and mind.</p>
+      <p class="font-bold mt-2">Price: $4</p>
+      <button class="mt-3 bg-blue-600 text-white px-4 py-2 rounded">Buy Now</button>
+    </div>
+
+      <div class="min-w-[250px] bg-white p-6 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-transform duration-300">
+      <img src="https://i.chaldn.com/_mpimage/mojo-soft-drink-2-ltr?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D130804&q=best&v=1&m=400" alt="Product 2" class="rounded mb-3">
+      <h3 class="text-xl font-semibold">Mojo</h3>
+      <p class="text-gray-600 text-sm mt-1">Deshi soft drinks.</p>
+      <p class="font-bold mt-2">Price: $15</p>
+      <button class="mt-3 bg-blue-600 text-white px-4 py-2 rounded">Buy Now</button>
+    </div>
+
+    <div class="min-w-[250px] bg-white p-6 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-transform duration-300">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7VdhHlnUZ5jio2KVd8ytc_tQNXgECA2wKkw&s" alt="Product 3" class="rounded mb-3">
+      <h3 class="text-xl font-semibold">Basmati</h3>
+      <p class="text-gray-600 text-sm mt-1">Deshi basmati.</p>
+      <p class="font-bold mt-2">Price: $20</p>
+      <button class="mt-3 bg-blue-600 text-white px-4 py-2 rounded">Buy Now</button>
+    </div>
+
+    <!-- Add more cards as needed -->
+  </div>
+</section>
+    <!--Reviews Sections-->
+    <section id="reviews" class="bg-gray-100 py-16">
+        <h2 class="text-3xl font-bold text-center mb-10 ">Customer Reviews</h2>
+        <div class="container mx-auto flex flex-wrap justify-center gap-6 px-4">
+            <div class="bg-white p-6 rounded-lg shadow text-center w-64">
+                <img src="https://cdn.daily-sun.com/public/news_images/2022/07/30/Hero_alom.PNG" alt="Customer 1" class="w-80 h-80 rounded-full mx-auto mb-3">
+                <h4 class="font-semibold">Hero Alam</h4>
+                <p class="text-yellow-500">*****</p>
+                <p class="text-gray-600 text-sm mt-2">ওরে বাবা! ঘরে বসেই তাজা সবজি, ফল আর স্ন্যাক্স পেয়ে গেলাম। ডেলিভারি টাইমও ফাস্ট, কোয়ালিটি একদম চমৎকার। আমি তো একদম খুশি! আবার অর্ডার দেবই!</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow text-center w-64">
+                <img src="https://d2u0ktu8omkpf6.cloudfront.net/e0e72f0317ddb452ca0142cbbe9fd5f982311bd01f9cb429.jpg" alt="Customer 2" class="w-80 h-80 rounded-full mx-auto mb-3">
+                <h4 class="font-semibold">Sakib Khan</h4>
+                <p class="text-yellow-500">*****</p>
+                <p class="text-gray-600 text-sm mt-2">আমি বলছি, অনলাইন গ্রোসারি অর্ডার দারুণ! তাজা সবজি, ফাস্ট ডেলিভারি, আর ঝামেলা একদম শূন্য। এখন থেকে বাজার আমার ঘরেই!</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow text-center w-64">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmte71BS43A0s9iESk6lJpZLm2CKP8_GU9Fg&s" alt="Customer 3" class="w-80 h-80 rounded-full mx-auto mb-3">
+                <h4 class="font-semibold">Ananta Jolil</h4>
+                <p class="text-yellow-500">*****</p>
+                <p class="text-gray-600 text-sm mt-2">একবার অর্ডার দিলে, অনেকবার অর্ডার করলে, আরেকবার করলে সেটা আগের অর্ডারের মতোই চলে যাবে।</p>
+            </div>
+
+        </div>
+    </section>
+    <!--Contact Section-->
+   <section id="contact" class="py-12 bg-gray-50">
+  <div class="container mx-auto px-4 md:px-8 max-w-4xl">
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">
+      Get in Touch
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8 bg-white shadow-md rounded-xl p-6">
+      
+      <!-- Left: Contact Info -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-gray-700">Contact Info</h3>
+        <p class="text-gray-600 text-sm">
+          We’re happy to answer your questions or hear your feedback.
+        </p>
+
+        <div class="space-y-2 text-gray-700 text-sm">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-blue-600"></i>
+            <p>cse main building,kumira, chittagong</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-blue-600"></i>
+            <p>dailygrocery.com</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-phone text-blue-600"></i>
+            <p>123 456 789</p>
+          </div>
+        </div>
+
+        <div class="flex gap-3 pt-2">
+          <a href="#" class="text-blue-600 hover:text-blue-800 text-base"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="text-blue-600 hover:text-blue-800 text-base"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="text-blue-600 hover:text-blue-800 text-base"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <form class="space-y-3 text-sm">
+        <input type="text" placeholder="Your Name"
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <input type="email" placeholder="Your Email"
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <textarea rows="3" placeholder="Your Message"
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <button type="submit"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200 w-full md:w-auto">
+          Send
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+    <!--Newsletter Section-->
+  <section id="newsletter" class="py-12 bg-gray-50">
+  <div class="container mx-auto px-4 md:px-8 max-w-xl text-center">
+    <h2 class="text-2xl font-bold text-gray-800 mb-3">
+      Join Our Newsletter
+    </h2>
+    <p class="text-gray-600 text-sm mb-6">
+      Get updates on new products and exclusive offers.
+    </p>
+
+    <form class="flex flex-col sm:flex-row gap-3 justify-center">
+      <input type="email" placeholder="Enter your email"
+        class="w-full sm:w-auto flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+      <button type="submit"
+        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200">
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>
+
+
+    <!--Footer-->
+    <footer class="bg-gray-50 py-6 border-t border-gray-200">
+  <div class="container mx-auto px-4 md:px-8 max-w-4xl flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+    
+    <!-- Left: Copyright -->
+    <p class="mb-3 md:mb-0"> 2025 Demo Store. All rights reserved.</p>
+
+    <!-- Right: Links -->
+    <ul class="flex gap-4">
+      <li><a href="#home" class="hover:text-blue-600 transition-colors">Home</a></li>
+      <li><a href="#products" class="hover:text-blue-600 transition-colors">Products</a></li>
+      <li><a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a></li>
+    </ul>
+
+  </div>
+</footer>
+
+</body>
+</html>
