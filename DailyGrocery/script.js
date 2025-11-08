@@ -6,23 +6,22 @@ const cartItems = document.getElementById("cart-items");
 const cartTotal = document.getElementById("cart-total");
 const buyButtons = document.querySelectorAll("button.bg-blue-600");
 
-//  Cart Data 
+// Cart Data 
 let items = [];
 
-// Toggle Cart Visibility 
+// Open & Close Cart 
 cartToggle.addEventListener("click", () => {
-  cart.classList.toggle("hidden");
+  cart.classList.remove("translate-x-full"); 
 });
 
-//  Close Cart Button 
 closeCart.addEventListener("click", () => {
-  cart.classList.add("hidden");
+  cart.classList.add("translate-x-full");
 });
 
-// Add to Cart Function
-buyButtons.forEach(button => {
+// add to cart
+buyButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
-    const card = e.target.closest("div"); // the product card
+    const card = e.target.closest("div"); 
     const name = card.querySelector("h4").textContent;
     const priceText = card.querySelector("p.font-bold").textContent;
     const price = parseFloat(priceText.replace(/[^0-9.]/g, ""));
@@ -32,9 +31,9 @@ buyButtons.forEach(button => {
   });
 });
 
-// Add Item Logic
+// add item
 function addItemToCart(name, price, imgSrc) {
-  const existingItem = items.find(item => item.name === name);
+  const existingItem = items.find((item) => item.name === name);
 
   if (existingItem) {
     existingItem.quantity += 1;
@@ -43,10 +42,10 @@ function addItemToCart(name, price, imgSrc) {
   }
 
   updateCart();
-  cart.classList.remove("hidden"); // show cart when item added
+  cart.classList.remove("translate-x-full"); 
 }
 
-// Update Cart UI 
+// update cart
 function updateCart() {
   cartItems.innerHTML = "";
   let total = 0;
@@ -55,7 +54,15 @@ function updateCart() {
     total += item.price * item.quantity;
 
     const li = document.createElement("li");
-    li.classList.add("flex", "items-center", "justify-between", "bg-gray-50", "p-2", "rounded", "shadow-sm");
+    li.classList.add(
+      "flex",
+      "items-center",
+      "justify-between",
+      "bg-gray-50",
+      "p-2",
+      "rounded",
+      "shadow-sm"
+    );
 
     li.innerHTML = `
       <div class="flex items-center gap-2">
@@ -78,7 +85,7 @@ function updateCart() {
   cartTotal.textContent = total.toFixed(2);
 }
 
-// Quantity Controls 
+// quantity
 function changeQuantity(index, delta) {
   items[index].quantity += delta;
   if (items[index].quantity <= 0) {
@@ -87,14 +94,15 @@ function changeQuantity(index, delta) {
   updateCart();
 }
 
-// Remove Single Item 
+// removing single item
 function removeItem(index) {
   items.splice(index, 1);
   updateCart();
 }
 
-//  Clear Cart 
+// clear cart
 function clearCart() {
   items = [];
   updateCart();
 }
+
