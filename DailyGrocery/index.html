@@ -40,7 +40,7 @@
 <section id="products" class="py-16 container mx-auto px-4">
   <h2 class="text-3xl font-bold text-center mb-10">Our Products</h2>
 
-  <!-- 🥭 Section 1: Fruits -->
+  <!--   Fruits -->
   <h3 class="text-2xl font-semibold mb-4">Fruits</h3>
   <div class="flex gap-6 overflow-x-auto scrollbar-hide py-4">
     <div class="min-w-[250px] bg-white p-6 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-transform duration-300">
@@ -93,7 +93,7 @@
   </div>
   
 
-  <!-- 🍗 Section 2: Meats & Fish-->
+  <!--Meats & Fish-->
   <h3 class="text-2xl font-semibold mb-4 mt-10">Meats & Fish</h3>
   <div class="flex gap-6 overflow-x-auto scrollbar-hide py-4">
     <div class="min-w-[250px] bg-white p-6 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-transform duration-300">
@@ -146,7 +146,7 @@
 
   </div>
 
-  <!-- 🌾 Section 3: Grocery -->
+  <!-- Grocery -->
   <h3 class="text-2xl font-semibold mb-4 mt-10">Grocery</h3>
   <div class="flex gap-6 overflow-x-auto scrollbar-hide py-4">
     <div class="min-w-[250px] bg-white p-6 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-transform duration-300">
@@ -227,26 +227,45 @@
     </section>
 
 
-
-   <!-- Floating Cart Sidebar -->
-  <div id="cart" class="fixed top-20 left-4 w-64 bg-white shadow-lg rounded-xl p-4 border border-gray-200 hidden z-50">
-    <div class="flex justify-between items-center mb-3">
-      <h3 class="text-xl font-semibold text-center flex-1">🛒 Cart</h3>
-      <button id="close-cart" class="text-gray-500 hover:text-red-500 text-xl font-bold">&times;</button>
-    </div>
-    <ul id="cart-items" class="space-y-2 text-gray-800"></ul>
-    <div class="mt-4 border-t pt-3 space-y-2">
-      <p class="font-semibold">Total: $<span id="cart-total">0</span></p>
-      <button class="bg-green-500 text-white w-full py-2 rounded hover:bg-green-600 transition">Confirm Order</button>
-      <button onclick="clearCart()" class="bg-red-500 text-white w-full py-2 rounded hover:bg-red-600 transition">Clear Cart</button>
-    </div>
+<!-- Cart Sidebar -->
+<div
+  id="cart"
+  class="fixed top-0 right-0 h-full w-72 bg-white shadow-2xl border-l border-gray-200 transform translate-x-full transition-transform duration-300 z-50 flex flex-col"
+>
+  <!-- Cart Header -->
+  <div class="flex justify-between items-center p-4 border-b">
+    <h3 class="text-xl font-semibold">🛒 Your Cart</h3>
+    <button id="close-cart" class="text-gray-500 hover:text-red-500 text-2xl font-bold">&times;</button>
   </div>
 
-  <!-- Floating Cart Toggle Button -->
-  <button id="cart-toggle" class="fixed top-1/2 right-0 transform -translate-y-1/2 bg-blue-600 text-white px-3 py-2 rounded-r-lg shadow hover:bg-blue-700 z-50">
-    🛍️
-  </button>
+  <!-- Cart Items -->
+  <div class="flex-1 overflow-y-auto p-4">
+    <ul id="cart-items" class="space-y-3 text-gray-800"></ul>
+  </div>
 
+  <!-- Cart Footer -->
+  <div class="p-4 border-t space-y-2">
+    <p class="font-semibold text-lg">Total: $<span id="cart-total">0</span></p>
+    <button class="bg-green-500 text-white w-full py-2 rounded-lg hover:bg-green-600 transition">
+      Confirm Order
+    </button>
+    <button
+      onclick="clearCart()"
+      class="bg-red-500 text-white w-full py-2 rounded-lg hover:bg-red-600 transition"
+    >
+      Clear Cart
+    </button>
+  </div>
+</div>
+
+
+<!--floating cart -->
+<button
+  id="cart-toggle"
+  class="fixed top-1/2 right-0 transform -translate-y-1/2 text-white px-3 py-3 rounded-l-lg shadow hover:bg-blue-700 z-50"
+>
+  🛒
+</button>
 
     <!--Contact Section-->
    <section id="contact" class="py-12 bg-gray-50">
